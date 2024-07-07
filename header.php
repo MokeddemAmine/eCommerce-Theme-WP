@@ -53,16 +53,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             <?php
-                $main_categories = get_categories(array(
-                    'parent'  => 0,
-                    'hide_empty' => false, // Set to true to hide categories with no posts
-                ));
+                $main_categories = get_terms( array(
+                    'taxonomy'   => 'product_cat',
+                    'hide_empty' => false,
+                    'parent'     => 0, // Retrieve only categories that do not have a parent
+                ) );
 
                 if (!empty($main_categories)) {
                     echo '<ul class="navbar-nav mx-auto text-uppercase">';
                         foreach ($main_categories as $category) {
 
-                            $subcategories = get_categories(array(
+                            $subcategories = get_terms(array(
+                                'taxonomy'   => 'product_cat',
                                 'parent'  => $category->term_id,
                                 'hide_empty' => false,
                             ));
@@ -70,13 +72,14 @@
                                 if (!empty($subcategories)) {
                                     
                                     echo '<li class="nav-item dropdown-mine mx-4">';
-                                        echo '<a class="py-3 nav-link dropdown-toggle-mine" role="button" href="' . get_category_link($category->term_id) . '">' . esc_html($category->name) . '</a>';
+                                        echo '<a class="py-3 nav-link dropdown-toggle-mine" role="button" href="' . get_term_link($category) . '">' . esc_html($category->name) . '</a>';
                                         echo '<div class="dropdown-menu-mine">';
                                         echo '<ul class="list-unstyled dropdown-menu-list-mine container ">';
-                                            $i = 1;
+
                                             foreach ($subcategories as $subcategory) {
 
-                                                $second_subcategories = get_categories(array(
+                                                $second_subcategories = get_terms(array(
+                                                    'taxonomy'   => 'product_cat',
                                                     'parent'    => $subcategory->term_id,
                                                     'hide_empty'=> false,
                                                 ));
@@ -84,26 +87,23 @@
                                                 echo '<li class="dropdown-mine-second d-flex flex-column justify-items-start">';
                                                     if(!empty($second_subcategories)){
                                                         echo '<ul class=" dropdown-menu-list-second list-unstyled">';
-                                                                echo '<li class="mb-3"><a class="dropdown-head-mine-second d-inline-block" href="' . get_category_link($subcategory->term_id) . '">' . esc_html($subcategory->name) . '</a></li>';
+                                                                echo '<li class="mb-3"><a class="dropdown-head-mine-second d-inline-block" href="' . get_term_link($subcategory->term_id) . '">' . esc_html($subcategory->name) . '</a></li>';
                                                         foreach($second_subcategories as $subcat){
-                                                            echo '<li class="mb-2"><a class="dropdown-item-second" href="'.get_category_link($subcat->term_id).'">'.esc_html($subcat->name).'</a></li>';
+                                                            echo '<li class="mb-2"><a class="dropdown-item-second" href="'.get_term_link($subcat).'">'.esc_html($subcat->name).'</a></li>';
                                                         }
                                                         echo '</ul>';
                                                     }else{
-                                                        echo '<a class="dropdown-head-mine-second d-inline-block" href="' . get_category_link($subcategory->term_id) . '">' . esc_html($subcategory->name) . '</a>';
+                                                        echo '<a class="dropdown-head-mine-second d-inline-block" href="' . get_term_link($subcategory) . '">' . esc_html($subcategory->name) . '</a>';
                                                     }
                                                 echo '</li>';
-                                                if($i%4 == 0){
-                                                    echo '<br/>';
-                                                }
-                                                $i++;
+                                            
                                             }
                                         echo '</ul>';
                                         echo '</div>';
                                     echo '</li>';
                                 }
                                 else{
-                                    echo '<li class="nav-item mx-4"><a class="nav-link" href="' . get_category_link($category->term_id) . '">' . esc_html($category->name) . '</a></li>';
+                                    echo '<li class="nav-item mx-4"><a class="nav-link" href="' . get_term_link($category) . '">' . esc_html($category->name) . '</a></li>';
                                 }
                             }   
 
