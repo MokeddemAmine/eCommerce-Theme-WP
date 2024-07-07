@@ -1,0 +1,141 @@
+nav {
+  z-index: 1000;
+  position: relative;
+}
+nav .navbar-brand #image-logo {
+  width: 60px !important;
+  height: auto;
+  object-fit: cover;
+}
+nav .dropdown-toggle-mine {
+  font-size: 0.8rem;
+  position: relative;
+}
+nav .dropdown-toggle-mine::after {
+  content: "\f054" !important;
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: 900;
+  vertical-align: 0;
+  border-top: none;
+  font-size: 0.8rem;
+  position: absolute;
+  left: 100%;
+  transition: transform 0.3s ease;
+}
+nav .dropdown-toggle-mine:hover::after {
+  transform: rotate(90deg);
+}
+nav .dropdown-menu-mine {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #f8f9fa;
+}
+nav .dropdown-menu-mine .dropdown-menu-list-mine {
+  display: none;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+}
+nav .dropdown-menu-mine .dropdown-menu-list-mine .dropdown-mine-second {
+  width: 25%;
+  font-size: 0.8rem;
+  position: relative;
+}
+nav .dropdown-menu-mine .dropdown-menu-list-mine .dropdown-mine-second .dropdown-head-mine-second {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 1rem;
+  background-color: #f8f9fa;
+}
+nav .dropdown-menu-mine .dropdown-menu-list-mine .dropdown-mine-second a {
+  text-decoration: none;
+  color: #121212;
+}
+nav .dropdown-menu-mine .dropdown-menu-list-mine .dropdown-mine-second .dropdown-item-second {
+  position: relative;
+}
+nav .dropdown-menu-mine .dropdown-menu-list-mine .dropdown-mine-second .dropdown-item-second::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  background-color: #000a9f;
+  height: 2px;
+  transition: 0.3s;
+}
+nav .dropdown-menu-mine .dropdown-menu-list-mine .dropdown-mine-second .dropdown-item-second:hover {
+  color: #000a9f;
+}
+nav .dropdown-menu-mine .dropdown-menu-list-mine .dropdown-mine-second .dropdown-item-second:hover::after {
+  width: 100%;
+}
+nav .shopping-cart-icon {
+  position: relative;
+}
+nav .shopping-cart-icon .cart-count {
+  position: absolute;
+  background-color: #e0e722;
+  color: black;
+  border-radius: 50%;
+  padding: 0.3rem;
+  top: -0.5rem;
+  right: -0.5rem;
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+
+.search-product-woocommerce {
+  display: none;
+  position: relative;
+}
+.search-product-woocommerce .aws-container {
+  padding: 1rem;
+}
+.search-product-woocommerce .aws-search-field {
+  padding: 1rem;
+  border: none;
+}
+.search-product-woocommerce .aws-search-clear {
+  display: none;
+}
+.search-product-woocommerce .close {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  z-index: 1000;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.header-image {
+  position: relative;
+  min-height: 300px;
+}
+.header-image .header-btn {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  padding: 0.5rem 3rem;
+  font-size: 0.8rem;
+  border-radius: 1.2rem;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.header-image .header-btn:hover {
+  background-color: transparent;
+  color: white;
+}
+
+footer .privacy-terms a, footer .privacy-terms .copyright {
+  font-size: 0.7rem;
+}/*# sourceMappingURL=style.css.map */
