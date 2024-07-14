@@ -35,7 +35,7 @@
         <span class="close">&times;</span>
     </div>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary py-0">
+    <nav class="our-nav navbar navbar-expand-lg bg-body-tertiary py-0">
         <div class="container-fluid py-0">
             <a href="<?php echo get_home_url() ?>" class="my-0 py-0 navbar-brand d-flex align-items-center gap-2">
             <?php 

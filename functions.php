@@ -456,4 +456,14 @@ if (class_exists('WP_Customize_Control')) {
     }
 }
 
+function custom_enqueue_woocommerce_cart_styles() {
+    if (is_cart()) {
+        wp_enqueue_style('custom-cart-woocommerce-css', get_template_directory_uri() . '/cart-woocomerce-mine.css', array(), '1.0', 'all');
+        wp_enqueue_script('custom-cart-woocommerce-js',get_template_directory_uri().'/js/cart-woocommerce-mine.js',array('jquery'),false,true);
+    }
+}
+add_action('wp_enqueue_scripts', 'custom_enqueue_woocommerce_cart_styles');
+
+
+
 
