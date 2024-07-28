@@ -237,7 +237,6 @@ footer{
         padding:0 2rem;
         .entry-header{
             .entry-title{
-                color:#6c757d;
                 font-size:2rem;
                 margin:1rem;
             }
@@ -269,7 +268,7 @@ footer{
         .woocommerce-ordering{
             order:1;
             width:100%;
-            margin-left:1rem;
+            margin:1rem;
             .orderby{
                 padding:.5rem 1rem;
                 text-transform: capitalize;
@@ -277,7 +276,6 @@ footer{
                 display:inline-block;
                 border-color:#ccc;
                     option{
-                        
                         padding:.2rem;
                     }   
             }
@@ -357,9 +355,29 @@ footer{
     }
   }
 
-  .btn-main{
-    border: 1px solid #e0e722;
+  
+
+  // change style buttons in woocommerce 
+
+  // woocommerce account
+  .woocommerce-Addresses{
+    
+    .woocommerce-Address{
+        position:relative;
+        background-color: white;
+        padding:1rem;
+        border-radius:1rem;
+        h3{
+            color:#6c757d;
+        }
+        a.edit{
+            text-decoration:none;
+            color:#a3a735;
+            font-weight: bold;
+            position: absolute;
+            top:5px;
+            right:5px;
+        }
+    }
   }
-  .btn-main:hover{
-    background-color: #e0e722;
-  }
+  

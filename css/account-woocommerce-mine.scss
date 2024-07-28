@@ -1,0 +1,37 @@
+
+.page{
+    .entry-content{
+        .woocommerce{
+            .navigation-account{
+                width:25%;
+                ul{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        color:#777;
+                        font-weight: bold;
+                        transition: .2s;
+                        &:hover{
+                            color:#333;
+                        }
+                    }
+                }
+            }
+            .woocommerce-MyAccount-content{
+                width:75%;
+                .shop_table{
+                    .woocommerce-orders-table__cell{
+                        a{
+                            text-decoration:none;
+                            color:#777;
+                        }
+                    }
+                    .woocommerce-orders-table__cell-order-actions{
+                        display:flex;
+                        gap:1rem;
+                    }
+                }
+            }
+        }
+    }
+}

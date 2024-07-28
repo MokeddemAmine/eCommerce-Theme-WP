@@ -1,0 +1,27 @@
+.page{
+    .entry-content{
+        .wp-block-woocommerce-cart{
+            .wc-block-cart-item__wrap{
+                a.wc-block-components-product-name{
+                    text-decoration: none;
+                    color:#aaa;
+                    max-width:none !important;
+                    font-size:.8rem;
+                }
+    
+                .wc-block-cart-item__remove-link{
+                    text-decoration:none !important;
+    
+                }
+            }
+            table.wc-block-cart-items{
+                border:none;
+            }
+
+            
+        }
+    }
+    .is-large.wc-block-cart .wc-block-cart-items td{
+        border-top:none;
+    }
+}

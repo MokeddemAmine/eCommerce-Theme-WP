@@ -205,7 +205,6 @@ footer .privacy-terms a, footer .privacy-terms .copyright {
   padding: 0 2rem;
 }
 .page .entry-header .entry-title {
-  color: #6c757d;
   font-size: 2rem;
   margin: 1rem;
 }
@@ -234,7 +233,7 @@ footer .privacy-terms a, footer .privacy-terms .copyright {
 .page .woocommerce-ordering {
   order: 1;
   width: 100%;
-  margin-left: 1rem;
+  margin: 1rem;
 }
 .page .woocommerce-ordering .orderby {
   padding: 0.5rem 1rem;
@@ -316,10 +315,20 @@ footer .privacy-terms a, footer .privacy-terms .copyright {
   outline: 1px solid black;
 }
 
-.btn-main {
-  border: 1px solid #e0e722;
+.woocommerce-Addresses .woocommerce-Address {
+  position: relative;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
 }
-
-.btn-main:hover {
-  background-color: #e0e722;
+.woocommerce-Addresses .woocommerce-Address h3 {
+  color: #6c757d;
+}
+.woocommerce-Addresses .woocommerce-Address a.edit {
+  text-decoration: none;
+  color: #a3a735;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }/*# sourceMappingURL=style.css.map */

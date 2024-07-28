@@ -1,0 +1,19 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.page .entry-content .wc-block-components-panel__content .wc-block-components-product-metadata {
+  display: none;
+}
+.page .entry-content .order_item .product-name a {
+  color: #777;
+  text-decoration: none;
+  font-weight: bold;
+}
+.page .entry-content .order_item .product-name .wc-item-meta {
+  display: flex;
+  gap: 1rem;
+}
+.page .entry-content .order_item .product-name .wc-item-meta li {
+  display: flex;
+}/*# sourceMappingURL=checkout-woocommerce-mine.css.map */

@@ -1,0 +1,28 @@
+body{
+    background-color: #f8f9fa;
+}
+.page{
+    .entry-content{
+        .wc-block-components-panel__content{
+            .wc-block-components-product-metadata{
+                display: none;
+            }
+        }
+        .order_item{
+            .product-name{
+                a{
+                    color:#777;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+                .wc-item-meta{
+                    display:flex;
+                    gap:1rem;
+                    li{
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -19,6 +19,72 @@
         #upper-bar{
             color:<?php echo get_theme_mod('upper_bar_color','#000000') ?>
         }
+        nav#navbar{
+             background-color: <?php echo get_theme_mod( 'header_back_color', '#f8f9fa' ); ?>;
+        }
+        #header-title{
+            color:<?php echo get_theme_mod('header_title_color','#000000') ?> !important;
+        }
+        .dropdown-menu-mine{
+            background-color: <?php echo get_theme_mod( 'header_back_color', '#f8f9fa' ); ?> !important;
+        }
+        nav li a{
+            color:<?php echo get_theme_mod('header_color','#000000') ?> !important;
+        }
+        #header-icons a, #search-header-icon i{
+            color: <?php echo get_theme_mod( 'header_icons_color', '#000000' ); ?> !important;
+        }
+        nav li a.bg-header-chosen{
+            background-color: <?php echo get_theme_mod( 'header_back_color', '#f8f9fa' ); ?> !important;
+        }
+        body{
+            
+            background-color: <?php echo get_theme_mod( 'body_back_color', '#ffffff' ); ?> !important;
+        }
+        #primary .entry-header .entry-title{
+            color: <?php echo get_theme_mod( 'body_main_heading_color', '#6c757d' ); ?> !important;
+        }
+        .btn-main{
+            color: <?php echo get_theme_mod( 'button_color', '#000000' ); ?> !important;
+            border: 1px solid <?php echo get_theme_mod( 'button_hover_back_color', '#e0e722' ); ?> !important;
+            background-color: <?php echo get_theme_mod( 'button_back_color', '#ffffff' ); ?> !important;
+            border-radius:1rem !important;
+            transition:.3s !important;
+        }
+        .btn-main:hover{
+            background-color: <?php echo get_theme_mod( 'button_hover_back_color', '#e0e722' ); ?> !important;
+            color:<?php echo get_theme_mod( 'button_hover_color', '#ffffff' ); ?> !important;
+        }
+        .wc-block-components-button{    
+            text-decoration: none !important;
+            background-color:<?php echo get_theme_mod( 'button_hover_back_color', '#e0e722' ); ?> !important;
+            color:<?php echo get_theme_mod( 'button_hover_color', '#ffffff' ); ?> !important;
+            text-transform: uppercase !important;
+            border-radius:1rem !important;
+            font-weight: bold !important;
+            transition:.3s !important;
+            border:1px solid <?php echo get_theme_mod( 'button_hover_back_color', '#e0e722' ); ?> !important;
+        }
+        .wc-block-components-button:hover{
+            background-color: <?php echo get_theme_mod( 'button_back_color', '#ffffff' ); ?> !important;
+            color:<?php echo get_theme_mod( 'button_color', '#000000' ); ?> !important;
+        }
+        <?php 
+            $ordering_show = get_theme_mod('ordering_show', 'left');
+            if($ordering_show === 'right'){
+                ?>
+                .woocommerce-ordering{
+                    text-align: right;
+                }
+                <?php
+            }else if($ordering_show === 'center'){
+                ?>
+                .woocommerce-ordering{
+                    text-align:center;
+                }
+                <?php
+            }
+        ?>
     </style>
 </head>
 <body>
@@ -35,9 +101,10 @@
         <span class="close">&times;</span>
     </div>
 
-    <nav class="our-nav navbar navbar-expand-lg bg-body-tertiary py-0">
+
+    <nav id="navbar" class="our-nav navbar navbar-expand-lg py-0">
         <div class="container-fluid py-0">
-            <a href="<?php echo get_home_url() ?>" class="my-0 py-0 navbar-brand d-flex align-items-center gap-2">
+            <a id="header-title" href="<?php echo get_home_url() ?>" class="my-0 py-0 navbar-brand d-flex align-items-center gap-2">
             <?php 
                 $custom_logo_id = get_theme_mod('custom_logo');
                 $logo = wp_get_attachment_image_src($custom_logo_id,'full');
@@ -72,7 +139,7 @@
                                 if (!empty($subcategories)) {
                                     
                                     echo '<li class="nav-item dropdown-mine mx-4">';
-                                        echo '<a class="py-3 nav-link dropdown-toggle-mine" role="button" href="' . get_term_link($category) . '">' . esc_html($category->name) . '</a>';
+                                        echo '<a class="py-4 nav-link dropdown-toggle-mine" role="button" href="' . get_term_link($category) . '">' . esc_html($category->name) . '</a>';
                                         echo '<div class="dropdown-menu-mine">';
                                         echo '<ul class="list-unstyled dropdown-menu-list-mine container ">';
 
@@ -87,13 +154,13 @@
                                                 echo '<li class="dropdown-mine-second d-flex flex-column justify-items-start">';
                                                     if(!empty($second_subcategories)){
                                                         echo '<ul class=" dropdown-menu-list-second list-unstyled">';
-                                                                echo '<li class="mb-3"><a class="dropdown-head-mine-second d-inline-block" href="' . get_term_link($subcategory->term_id) . '">' . esc_html($subcategory->name) . '</a></li>';
+                                                                echo '<li class="mb-3"><a class="dropdown-head-mine-second d-inline-block bg-header-chosen" href="' . get_term_link($subcategory->term_id) . '">' . esc_html($subcategory->name) . '</a></li>';
                                                         foreach($second_subcategories as $subcat){
                                                             echo '<li class="mb-2"><a class="dropdown-item-second" href="'.get_term_link($subcat).'">'.esc_html($subcat->name).'</a></li>';
                                                         }
                                                         echo '</ul>';
                                                     }else{
-                                                        echo '<a class="dropdown-head-mine-second d-inline-block" href="' . get_term_link($subcategory) . '">' . esc_html($subcategory->name) . '</a>';
+                                                        echo '<a class="dropdown-head-mine-second d-inline-block bg-header-chosen" href="' . get_term_link($subcategory) . '">' . esc_html($subcategory->name) . '</a>';
                                                     }
                                                 echo '</li>';
                                             
@@ -114,8 +181,8 @@
                     echo 'No main categories found.';
                 }
                 ?>
-                <div class="d-flex align-items-center justify-content-center my-3 my-lg-0 gap-4 me-4">
-                    <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ) ?>" class="text-dark">
+                <div id="header-icons" class="d-flex align-items-center justify-content-center my-3 my-lg-0 gap-4 me-4">
+                    <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ) ?>/orders" class="text-dark">
                         <i class="fa-solid fa-user"></i>
                     </a>
                     <span id="search-header-icon" style="cursor:pointer">

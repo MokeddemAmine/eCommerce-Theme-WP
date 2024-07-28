@@ -1,1 +1,15 @@
-/*# sourceMappingURL=cart-woocomerce-mine.css.map */
+.page .entry-content .wp-block-woocommerce-cart .wc-block-cart-item__wrap a.wc-block-components-product-name {
+  text-decoration: none;
+  color: #aaa;
+  max-width: none !important;
+  font-size: 0.8rem;
+}
+.page .entry-content .wp-block-woocommerce-cart .wc-block-cart-item__wrap .wc-block-cart-item__remove-link {
+  text-decoration: none !important;
+}
+.page .entry-content .wp-block-woocommerce-cart table.wc-block-cart-items {
+  border: none;
+}
+.page .is-large.wc-block-cart .wc-block-cart-items td {
+  border-top: none;
+}/*# sourceMappingURL=cart-woocomerce-mine.css.map */

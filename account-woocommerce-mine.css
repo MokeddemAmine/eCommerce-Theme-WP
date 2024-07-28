@@ -1,0 +1,26 @@
+.page .entry-content .woocommerce .navigation-account {
+  width: 25%;
+}
+.page .entry-content .woocommerce .navigation-account ul {
+  list-style: none;
+}
+.page .entry-content .woocommerce .navigation-account ul a {
+  text-decoration: none;
+  color: #777;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.page .entry-content .woocommerce .navigation-account ul a:hover {
+  color: #333;
+}
+.page .entry-content .woocommerce .woocommerce-MyAccount-content {
+  width: 75%;
+}
+.page .entry-content .woocommerce .woocommerce-MyAccount-content .shop_table .woocommerce-orders-table__cell a {
+  text-decoration: none;
+  color: #777;
+}
+.page .entry-content .woocommerce .woocommerce-MyAccount-content .shop_table .woocommerce-orders-table__cell-order-actions {
+  display: flex;
+  gap: 1rem;
+}/*# sourceMappingURL=account-woocommerce-mine.css.map */

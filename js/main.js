@@ -72,5 +72,10 @@ $(document).ready(function(){
         var newText = option.textContent.replace(regex,'');
         option.textContent = newText;
     })
+
+    
+
+    
+    
     
 })
