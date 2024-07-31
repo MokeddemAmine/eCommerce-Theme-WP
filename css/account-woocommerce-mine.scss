@@ -3,7 +3,9 @@
     .entry-content{
         .woocommerce{
             .navigation-account{
-                width:25%;
+                @media (min-width:992px){
+                    width:25%;
+                }
                 ul{
                     list-style: none;
                     a{

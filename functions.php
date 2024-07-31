@@ -599,11 +599,224 @@
         
             // Add color control for background aside filter 
             $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'filter_back_color', array(
-                'label' => __('Btn Border & Hover Back Color', 'myTheme' ),
-                'section' => 'body_settings',
+                'label' => __('Filter Back Color', 'myTheme' ),
+                'section' => 'filter_aside_settings',
                 'settings' => 'filter_back_color',
                 'type'  => 'color'
             ) ) );
+
+            // add color for heading of aside filter 
+            $wp_customize->add_setting( 'filter_border_color', array(
+                'default' => '#ffffff', // Default color
+                'sanitize_callback' => 'sanitize_hex_color', // Sanitization callback
+            ) );
+        
+            // Add color control for heading of aside filter 
+            $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'filter_border_color', array(
+                'label' => __('Filter Border Color', 'myTheme' ),
+                'section' => 'filter_aside_settings',
+                'settings' => 'filter_border_color',
+                'type'  => 'color'
+            ) ) );
+
+            // add color for text of aside filter 
+            $wp_customize->add_setting( 'filter_text_color', array(
+                'default' => '#000000', // Default color
+                'sanitize_callback' => 'sanitize_hex_color', // Sanitization callback
+            ) );
+        
+            // Add color control for text of aside filter 
+            $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'filter_text_color', array(
+                'label' => __('Filter Text Color', 'myTheme' ),
+                'section' => 'filter_aside_settings',
+                'settings' => 'filter_text_color',
+                'type'  => 'color'
+            ) ) );
+
+            // add color for heading of aside filter 
+            $wp_customize->add_setting( 'filter_heading_color', array(
+                'default' => '#000000', // Default color
+                'sanitize_callback' => 'sanitize_hex_color', // Sanitization callback
+            ) );
+        
+            // Add color control for heading of aside filter 
+            $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'filter_heading_color', array(
+                'label' => __('Filter Heading Color', 'myTheme' ),
+                'section' => 'filter_aside_settings',
+                'settings' => 'filter_heading_color',
+                'type'  => 'color'
+            ) ) );
+
+            // add color for lines of aside filter 
+            $wp_customize->add_setting( 'filter_lines_color', array(
+                'default' => '#000000', // Default color
+                'sanitize_callback' => 'sanitize_hex_color', // Sanitization callback
+            ) );
+        
+            // Add color control for lines of aside filter 
+            $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'filter_lines_color', array(
+                'label' => __('Filter Lines Color', 'myTheme' ),
+                'section' => 'filter_aside_settings',
+                'settings' => 'filter_lines_color',
+                'type'  => 'color'
+            ) ) );
+
+            // add color for color  of label size 
+            $wp_customize->add_setting( 'filter_label_size_color', array(
+                'default' => '#000000', // Default color
+                'sanitize_callback' => 'sanitize_hex_color', // Sanitization callback
+            ) );
+        
+            // Add color control for color  of label size 
+            $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'filter_label_size_color', array(
+                'label' => __('Filter Label Size Color', 'myTheme' ),
+                'section' => 'filter_aside_settings',
+                'settings' => 'filter_label_size_color',
+                'type'  => 'color'
+            ) ) );
+
+            // add color for border color  of label size 
+            $wp_customize->add_setting( 'filter_label_size_border_color', array(
+                'default' => '#cccccc', // Default color
+                'sanitize_callback' => 'sanitize_hex_color', // Sanitization callback
+            ) );
+        
+            // Add color control for border  color of label size 
+            $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'filter_label_size_border_color', array(
+                'label' => __('Filter Label Size Border Color', 'myTheme' ),
+                'section' => 'filter_aside_settings',
+                'settings' => 'filter_label_size_border_color',
+                'type'  => 'color'
+            ) ) );
+
+
+            // Add the setting for the number
+                $wp_customize->add_setting( 'filter_label_size_border_size_color' , array(
+                    'default'   => '16',
+                    'transport' => 'refresh',
+                ) );
+
+                // Add the control for the number
+                $wp_customize->add_control( 'filter_label_size_border_size_color', array(
+                    'label'    => __( 'Filter Label Size border Size', 'mytheme' ),
+                    'section'  => 'filter_aside_settings',
+                    'settings' => 'filter_label_size_border_size_color',
+                    'type'     => 'number',
+                ) );
+
+                // add color for back hover  of label size 
+                    $wp_customize->add_setting( 'hover_filter_label_size_back_color', array(
+                        'default' => '#cccccc', // Default color
+                        'sanitize_callback' => 'sanitize_hex_color', // Sanitization callback
+                    ) );
+                
+                // Add color control for back hover of label size 
+                $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hover_filter_label_size_back_color', array(
+                    'label' => __('Hover Label Size Back Color', 'myTheme' ),
+                    'section' => 'filter_aside_settings',
+                    'settings' => 'hover_filter_label_size_back_color',
+                    'type'  => 'color'
+                ) ) );
+
+                // add color for back hover  of label size 
+                $wp_customize->add_setting( 'hover_filter_label_size_color', array(
+                    'default' => '#222222', // Default color
+                    'sanitize_callback' => 'sanitize_hex_color', // Sanitization callback
+                ) );
+            
+                // Add color control for back hover of label size 
+                $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hover_filter_label_size_color', array(
+                    'label' => __('Hover Label Size Color', 'myTheme' ),
+                    'section' => 'filter_aside_settings',
+                    'settings' => 'hover_filter_label_size_color',
+                    'type'  => 'color'
+                ) ) );
+
+                // add color for button filter text color 
+                $wp_customize->add_setting( 'filter_btn_text_color', array(
+                    'default' => '#eeeeee', // Default color
+                    'sanitize_callback' => 'sanitize_hex_color', // Sanitization callback
+                ) );
+            
+                // Add color control for button filter text color
+                $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'filter_btn_text_color', array(
+                    'label' => __('Btn Filter Text Color', 'myTheme' ),
+                    'section' => 'filter_aside_settings',
+                    'settings' => 'filter_btn_text_color',
+                    'type'  => 'color'
+                ) ) );
+
+                // add color for button filter back color 
+                $wp_customize->add_setting( 'filter_btn_back_color', array(
+                    'default' => '#333333', // Default color
+                    'sanitize_callback' => 'sanitize_hex_color', // Sanitization callback
+                ) );
+            
+                // Add color control for button filter back color
+                $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'filter_btn_back_color', array(
+                    'label' => __('Btn Filter Back Color', 'myTheme' ),
+                    'section' => 'filter_aside_settings',
+                    'settings' => 'filter_btn_back_color',
+                    'type'  => 'color'
+                ) ) );
+
+                // add color for button filter border color 
+                $wp_customize->add_setting( 'filter_btn_border_color', array(
+                    'default' => '#333333', // Default color
+                    'sanitize_callback' => 'sanitize_hex_color', // Sanitization callback
+                ) );
+            
+                // Add color control for button filter border color
+                $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'filter_btn_border_color', array(
+                    'label' => __('Btn Filter Border Color', 'myTheme' ),
+                    'section' => 'filter_aside_settings',
+                    'settings' => 'filter_btn_border_color',
+                    'type'  => 'color'
+                ) ) );
+
+                // add color for button filter text color 
+                $wp_customize->add_setting( 'hover_filter_btn_text_color', array(
+                    'default' => '#cccccc', // Default color
+                    'sanitize_callback' => 'sanitize_hex_color', // Sanitization callback
+                ) );
+            
+                // Add color control for button filter text color
+                $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hover_filter_btn_text_color', array(
+                    'label' => __('Hover Btn Filter Text Color', 'myTheme' ),
+                    'section' => 'filter_aside_settings',
+                    'settings' => 'hover_filter_btn_text_color',
+                    'type'  => 'color'
+                ) ) );
+
+                // add color for button filter back color 
+                $wp_customize->add_setting( 'hover_filter_btn_back_color', array(
+                    'default' => '#666666', // Default color
+                    'sanitize_callback' => 'sanitize_hex_color', // Sanitization callback
+                ) );
+            
+                // Add color control for button filter back color
+                $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hover_filter_btn_back_color', array(
+                    'label' => __('Hober Btn Filter Back Color', 'myTheme' ),
+                    'section' => 'filter_aside_settings',
+                    'settings' => 'hover_filter_btn_back_color',
+                    'type'  => 'color'
+                ) ) );
+
+                // add color for button filter border color 
+                $wp_customize->add_setting( 'hover_filter_btn_border_color', array(
+                    'default' => '#666666', // Default color
+                    'sanitize_callback' => 'sanitize_hex_color', // Sanitization callback
+                ) );
+            
+                // Add color control for button filter border color
+                $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hover_filter_btn_border_color', array(
+                    'label' => __('Hover Btn Filter Border Color', 'myTheme' ),
+                    'section' => 'filter_aside_settings',
+                    'settings' => 'hover_filter_btn_border_color',
+                    'type'  => 'color'
+                ) ) );
+
+            
         //////////////////////////////////////
         // add settings for footer
             // create footer settings 1
@@ -1257,23 +1470,23 @@ function custom_filter_shortcode($atts) {
     ));
     ob_start();
     ?>
-    <form id="filter-form" method="GET" action="<?php echo esc_url($current_category_url); ?>" class="px-3 filter-form" style="width:414px;">
+    <form id="filter-form" method="GET" action="<?php echo esc_url($current_category_url); ?>" class="px-3 filter-form">
         <div class="filter-group text-center text-md-start">
         <div class="size-filter filter-section">
-                <h6 >Size <i class="fa-solid fa-chevron-down fa-xs"></i></h6>
+                <h6 class="filter-title">Size <i class="fa-solid fa-chevron-down fa-xs"></i></h6>
                 <div class="size-content">
                     <div class="row">
-                    <?php foreach ($sizes as $size) : ?>
-                        <div class="col-4 mb-3">
+                    <?php if(count($sizes)){ foreach ($sizes as $size) : ?>
+                        <div class="col-4 col-md-6 col-lg-4 mb-3">
                             <input type="radio" class="d-none" name="size" class="" value="<?php echo esc_attr($size->slug); ?>" id="<?php echo esc_html($size->name); ?>" <?php if(isset($_GET['size']) && $_GET['size']==$size->slug) echo 'checked'; ?>><label for="<?php echo esc_html($size->name); ?>" <?php if(isset($_GET['size']) && $_GET['size']==$size->slug) echo 'class="size-label-checked"'; ?>><?php echo esc_html($size->name); ?></label>
                         </div>
-                    <?php endforeach; ?>
+                    <?php endforeach; }?>
                     </div>
                 </div>
             </div>
             <hr>
             <div class="price-filter filter-section">
-                <h6 >Price <i class="fa-solid fa-chevron-down fa-xs"></i></h6>
+                <h6 class="filter-title">Price <i class="fa-solid fa-chevron-down fa-xs"></i></h6>
                 <div class="price-content ps-3">
                     <div class="form-group">
                         <label for="min_price" class="d-block text-secondary">Min Price</label>
@@ -1287,15 +1500,15 @@ function custom_filter_shortcode($atts) {
             </div>
             <hr>
             <div class="color-filter filter-section">
-                <h6 >Color <i class="fa-solid fa-chevron-down fa-xs"></i></h6>
+                <h6 class="filter-title">Color <i class="fa-solid fa-chevron-down fa-xs"></i></h6>
                 <div class="color-content">
-                    <?php foreach ($colors as $color) : ?>
+                    <?php if(count($colors)){ foreach ($colors as $color) : ?>
                         <input type="radio" class="d-none" value="<?php echo esc_attr($color->slug); ?>" name="color" id="<?php echo esc_attr($color->slug); ?>" <?php selected(isset($_GET['color']) ? $_GET['color'] : '', $color->slug); ?> /> <label for="<?php echo esc_attr($color->slug); ?>" data-color="<?php echo esc_attr($color->slug); ?>" style="background-color: <?php echo esc_attr($color->slug); ?>;" <?php if(isset($_GET['color']) && $_GET['color']==$color->slug) echo 'class="color-label-checked"'; ?>></label>
-                    <?php endforeach; ?>
+                    <?php endforeach; } ?>
                 </div>
             </div>
             <div class="d-grid gap-2 mt-3">
-                <button type="submit" class="btn btn-dark filter-btn">Filter</button>
+                <button type="submit" class="btn btn-filter">Filter</button>
             </div>
         </div>
     </form>
@@ -1373,7 +1586,7 @@ add_action( 'woocommerce_before_shop_loop', 'add_custom_aside_before_products', 
 function add_custom_aside_before_products() {
     if ( is_product_category() ) {
         
-        echo '<aside class="custom-aside rounded p-2 me-2">';
+        echo '<aside id="aside-filter" class="custom-aside rounded p-2 me-2">';
         echo do_shortcode('[custom_price_filter]');
         echo '</aside>';
     }

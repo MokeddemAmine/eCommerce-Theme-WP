@@ -65,6 +65,11 @@ $(document).ready(function(){
         $($(this).siblings('div')).slideToggle(200);
     })
 
+    console.log($('body').width());
+    if($('body').width() < 768){
+        $('#filter-form .filter-section > div').hide();
+    }
+
     // minimize sorting products in category page
     var options = $('.page .entry-content .woocommerce .orderby option');
     var regex = new RegExp('\\b'+'Sort by '+'\\b','gi');

@@ -59,7 +59,7 @@
             ?>
         </div>
     </div>
-    <div class="container-fluid m-0 my-3 p-0" style="height:600px">
+    <div class="container-fluid m-0 my-3 p-0" >
         <div class="header-section-2 h-100">
         <?php
 
@@ -73,7 +73,7 @@
             }
 
             if ($homepage_image) {
-                echo '<img src="' . esc_url($homepage_image) . '" alt="Homepage Image" class=" w-100 h-100">';
+                echo '<img src="' . esc_url($homepage_image) . '" alt="Homepage Image" class=" w-100 h-100" style="object-fit:contain">';
             }
 
             if ($homepage_category_link){

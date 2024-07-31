@@ -85,6 +85,56 @@
                 <?php
             }
         ?>
+
+        /* aside filter */
+
+        #aside-filter{
+            background-color: <?php echo get_theme_mod( 'filter_back_color', '#ffffff' ); ?> !important;
+            color:<?php echo get_theme_mod( 'filter_text_color', '#000000' ); ?> !important;
+            border:1px dashed <?php echo get_theme_mod( 'filter_border_color', '#ffffff' ); ?> !important;
+        }
+        #aside-filter .filter-title{
+            color:<?php echo get_theme_mod( 'filter_heading_color', '#000000' ); ?> !important;
+        }
+        #aside-filter hr{
+            border-color:<?php echo get_theme_mod( 'filter_lines_color', '#000000' ); ?> !important;
+        }
+        <?php
+            $custom_number = get_theme_mod( 'filter_label_size_border_size_color', '16' );
+        ?>
+        #aside-filter .size-filter label{
+                color:<?php echo get_theme_mod( 'filter_label_size_color', '#000000' ); ?> !important;
+                border:1px solid <?php echo get_theme_mod( 'filter_label_size_border_color', '#cccccc' ); ?> !important;
+                
+                border-radius:<?php echo esc_html( $custom_number ).'px' ?> !important;
+                display:block;
+                text-align: center;
+                padding:.5rem;
+                font-size:.8rem;
+                transition: .3s;
+                cursor:pointer;
+                
+        }
+        #aside-filter .size-filter label:hover{
+            background-color: <?php echo get_theme_mod( 'hover_filter_label_size_back_color', '#222222' ); ?> !important;
+            color:<?php echo get_theme_mod( 'hover_filter_label_size_color', '#ffffff' ); ?> !important;
+        }
+        #aside-filter .size-filter label.size-label-checked{
+            background-color: <?php echo get_theme_mod( 'hover_filter_label_size_back_color', '#222222' ); ?> !important;
+            color:<?php echo get_theme_mod( 'hover_filter_label_size_color', '#ffffff' ); ?> !important;
+        }
+        #aside-filter .btn-filter{
+            border:1px solid <?php echo get_theme_mod( 'filter_btn_border_color', '#333333' ); ?> !important;
+            border-radius:1rem;
+            background-color: <?php echo get_theme_mod( 'filter_btn_back_color', '#333333' ); ?> !important;
+            color:<?php echo get_theme_mod( 'filter_btn_text_color', '#eeeeee' ); ?> !important;
+            transition:.3s;
+        }
+        #aside-filter .btn-filter:hover{
+            background-color: <?php echo get_theme_mod( 'hover_filter_btn_back_color', '#666666' ); ?> !important;
+            border-color:<?php echo get_theme_mod( 'hover_filter_btn_border_color', '#666666' ); ?> !important;
+            color:<?php echo get_theme_mod( 'hover_filter_btn_text_color', '#cccccc' ); ?> !important;
+        }
     </style>
 </head>
 <body>

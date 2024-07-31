@@ -1,5 +1,7 @@
-.page .entry-content .woocommerce .navigation-account {
-  width: 25%;
+@media (min-width: 992px) {
+  .page .entry-content .woocommerce .navigation-account {
+    width: 25%;
+  }
 }
 .page .entry-content .woocommerce .navigation-account ul {
   list-style: none;
